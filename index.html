@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello,vue.js</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div id="app">
+  <!-- data -->
+   <p>{{message}}</p>
+   <p><input type="text" v-model:value="message"></p>
+   <!-- 単位変換アプリ -->
+   <p><input type="text" v-model:value="km">km</p>
+   <p><input type="text" v-model:value="m">m</p>
+   <p><input type="text" v-model:value="mm">mm</p>
+   <!-- 算出プロパティと監視プロパティの違い -->
+   <p>firstName: <input type="text" v-model:value="firstName">
+   </p>
+   <p>lastName: <input type="text" v-model:value="lastName">
+   </p>
+   <p>fullName:{{fullName}} </p>
+
+
+   <!-- デバック用 -->
+   <pre>{{$data}}</pre>
+  </div>
+  <!-- vie.jsのCDNを先に読み込む。URLは公式ページから -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
